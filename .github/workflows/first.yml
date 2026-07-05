@@ -6,4 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
-        run: echo "Hello GitHub Action" 
+        run: echo "Hello GitHub Action"
+      - name: Show Date
+        run: date
+      - name: Show Current DIrectory
+        run: pwd
+      - name: Show Current User
+        run: whoami
+      - name: List Files
+        run: ls -la
