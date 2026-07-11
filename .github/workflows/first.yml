@@ -1,18 +1,41 @@
-name : My First Workflow
-on: 
-workflow_dispatch:
+name: My First Workflow
+
+on:
+  workflow_dispatch:
   push:
+
 jobs:
   hello:
     runs-on: ubuntu-latest
+
     steps:
       - name: Print Hello
         run: echo "Hello GitHub Action"
+
       - name: Show Date
         run: date
-      - name: Show Current DIrectory
+
+      - name: Show Current Directory
         run: pwd
+
       - name: Show Current User
         run: whoami
+
       - name: List Files
         run: ls -la
+
+  test:
+    runs-on: ubuntu-latest
+    needs: hello
+
+    steps:
+      - name: Test Phase
+        run: echo "Running test cases"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Deploy the App
+        run: echo "Deploying the application"
