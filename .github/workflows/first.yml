@@ -1,8 +1,8 @@
 name: My First Workflow
 
 on:
-  workflow_dispatch:
   push:
+  workflow_dispatch:
 
 jobs:
   hello:
@@ -39,3 +39,17 @@ jobs:
     steps:
       - name: Deploy the App
         run: echo "Deploying the application"
+
+      - name: Send Success Email
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Workflow Success"
+          body: "Workflow completed successfully."
+          to: sachintiwari74gpj@gmail.com
+          from: ${{ secrets.EMAIL_USERNAME }}
