@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "✅ Workflow Success"
           body: "GitHub Actions workflow completed successfully."
-          to: sachintiwari74gpj@gmail.com,tiwariisachin94gpj@gmail.com
+          to: sachintiwari74gpj@gmail.com,ujjwala076121@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
 
       - name: Send Failure Email
@@ -65,5 +65,5 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "❌ Workflow Failed"
           body: "GitHub Actions workflow failed. Please check the Actions logs."
-          to: sachintiwari74gpj@gmail.com,tiwariisachin94gpj@gmail.com
+          to: sachintiwari74gpj@gmail.com,ujjwala076121@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
