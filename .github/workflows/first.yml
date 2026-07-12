@@ -51,7 +51,6 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Workflow Success"
           body: "Workflow completed successfully."
-          to: sachintiwari74gpj@gmail.com
+          to: sachintiwari74gpj@gmail.com,tiwariisachin94gpj@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
-          to: tiwariisachin94gpj@gmail.com
           
