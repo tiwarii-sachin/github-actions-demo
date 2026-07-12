@@ -53,3 +53,5 @@ jobs:
           body: "Workflow completed successfully."
           to: sachintiwari74gpj@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
+          to: tiwariisachin94gpj@gmail.com
+          from: ${{secrets.EMAIL_USERNAME}}
