@@ -1,7 +1,7 @@
 name: second-workflow
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   second_job:
