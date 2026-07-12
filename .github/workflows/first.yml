@@ -1,4 +1,4 @@
-name: My First Workflow
+name: Automation file
 
 on:
   push:
@@ -54,4 +54,4 @@ jobs:
           to: sachintiwari74gpj@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
           to: tiwariisachin94gpj@gmail.com
-          from: ${{secrets.EMAIL_USERNAME}}
+          
