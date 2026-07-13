@@ -1,16 +1,13 @@
-name: Docker File
+name: Docker file
 on:
   push:
-    jobs:
-      Docker_job:
-        runs-on: ubuntu-latest
+jobs:
+  Docker_job:
+    runs-on: ubuntu-latest
 
-        steps:
+    steps:
+      - name: Check Docker Version
+        run: docker --version
 
-          - name: Docker version
-            run: docker --version
-
-          - name: List of containers
-            run: docker ps
-              
-
+      - name: List of Containers
+        run: docker ps
