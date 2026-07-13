@@ -20,4 +20,17 @@ jobs:
 
     steps:
       - name: New Commands
-        run: echo "Hello new commands"       
+        run: echo "Hello new commands" 
+
+  another_job:
+   needs: new_job
+   runs-on: ubuntu-slim
+
+   steps:
+     - name: final
+       run: echo "final commands executions"
+     - name: username
+       run: whoami
+
+
+
