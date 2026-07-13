@@ -13,16 +13,11 @@ jobs:
 
       - name: Bye
         run: echo "Bye Bye"
-      - name: Send Email
-        if: always()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Check the workflow and responsed"
-          body: "Workflows executed"
-          to: ujjwala076121@gmail.com, sachintiwari74gpj@gmail.com
-          from: ${{secrets.EMAIL_USERNAME}}
+
+  new_job:
+    needs: second_job
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: New Commands
+        run: echo "Hello new commands"       
