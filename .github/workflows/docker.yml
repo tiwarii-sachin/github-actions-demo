@@ -11,3 +11,6 @@ jobs:
 
       - name: List of Containers
         run: docker ps
+
+      - name: About Docker
+        run: docker info
